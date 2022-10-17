@@ -1,6 +1,15 @@
 vim.g.tokyonight_style = "storm"
 vim.g.tokyonight_italic_functions = true
 vim.cmd("colorscheme tokyonight")
+
+require("lualine").setup({
+	options = {
+		component_separators = "",
+		section_separators = "",
+		theme = "kanagawa",
+	},
+})
+
 -- require('kanagawa').setup({
 --     undercurl = true,           -- enable undercurls
 --     commentStyle = { italic = true },
@@ -21,13 +30,4 @@ vim.cmd("colorscheme tokyonight")
 -- })
 --
 -- setup must be called before loading
-vim.cmd("colorscheme kanagawa")
-require'lualine'.setup{
-    options = { 
-        component_separators = '', 
-        section_separators = '',
-        theme = 'kanagawa'
-    }
-}
-
-require'nvim-tree'.setup{}
+-- vim.cmd("colorscheme kanagawa")

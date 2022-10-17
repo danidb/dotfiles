@@ -8,6 +8,7 @@ require("formatter").setup({
 		javascriptreact = require("formatter.filetypes.javascriptreact").prettier,
 		typescript = require("formatter.filetypes.typescript").prettier,
 		typescriptreact = require("formatter.filetypes.typescriptreact").prettier,
+		prisma = require("formatter.defaults.prettier"),
 		["*"] = require("formatter.filetypes.any").remove_trailing_whitespacee,
 	},
 })
