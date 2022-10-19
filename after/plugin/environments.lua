@@ -39,14 +39,10 @@ cmp.setup.cmdline(":", {
 	}),
 })
 
-local servers = { "sumneko_lua", "astro", "tailwindcss" }
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
-
-for _, lsp in ipairs(servers) do
-	lspconfig[lsp].setup({
-		capabilities = capabilities,
-	})
-end
+require("lspconfig").sumneko_lua.setup({ capabilities = capabilities })
+require("lspconfig").astro.setup({ capabilities = capabilities, filtypes = { "astro" } })
+require("lspconfig").tailwindcss.setup({ capabilities = capabilities })
 require("typescript").setup({
 	disable_commands = false, -- prevent the plugin from creating Vim commands
 	debug = false, -- enable debug logging for commands
