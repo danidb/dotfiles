@@ -11,9 +11,9 @@ vim.opt.wrap = false
 vim.opt.mouse = "a"
 vim.opt.completeopt = "menuone,noinsert,noselect"
 vim.opt.errorbells = false
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true 
 vim.opt.incsearch = true
 vim.opt.cmdheight = 1
 vim.opt.updatetime = 50
 vim.opt.shortmess:append("c")
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "120"

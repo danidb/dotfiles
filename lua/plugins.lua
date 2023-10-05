@@ -1,12 +1,11 @@
-return require("packer").startup(
-	function(use) 
+return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("rebelot/kanagawa.nvim")
-	use("folke/tokyonight.nvim")
-	use({
-		"rose-pine/nvim",
-		as = "rose-pine",
-	})
+	-- use("folke/tokyonight.nvim")
+	-- use({
+	-- 	"rose-pine/nvim",
+	-- 	as = "rose-pine",
+	-- })
 	use({
 		"folke/zen-mode.nvim",
 		config = function()
@@ -35,7 +34,7 @@ return require("packer").startup(
 			"kyazdani42/nvim-web-devicons", -- optional, for file icons
 		},
 	})
-	use("nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"})
+	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 	use("windwp/nvim-ts-autotag")
 	use({
 		"numToStr/Comment.nvim",
@@ -49,12 +48,16 @@ return require("packer").startup(
 		requires = "kyazdani42/nvim-web-devicons",
 		config = function()
 			require("trouble").setup({
+				mode = "document_diagnostics",
+				auto_open = true,
 				-- your configuration comes here
 				-- or leave it empty to use the default settings
 				-- refer to the configuration section below
 			})
 		end,
 	})
+	use("williamboman/mason.nvim")
+	use("williamboman/mason-lspconfig.nvim")
 	use("neovim/nvim-lspconfig")
 	use("jose-elias-alvarez/typescript.nvim")
 	use("hrsh7th/nvim-cmp")
@@ -65,5 +68,24 @@ return require("packer").startup(
 	use("saadparwaiz1/cmp_luasnip")
 	use("L3MON4D3/LuaSnip")
 	use("mhartington/formatter.nvim")
+	use("simrat39/rust-tools.nvim")
 	use("nvim-lua/plenary.nvim")
+	use("mfussenegger/nvim-dap")
+	-- use({
+	-- 	"maxmx03/solarized.nvim",
+	-- 	config = function()
+	-- 		local success, solarized = pcall(require, "solarized")
+	--
+	-- 		vim.o.background = "dark"
+	--
+	-- 		solarized:setup({
+	-- 			config = {
+	-- 				theme = "neovim",
+	-- 				transparent = true,
+	-- 			},
+	-- 		})
+	--
+	-- 		vim.cmd("colorscheme solarized")
+	-- 	end,
+	-- })
 end)

@@ -38,13 +38,36 @@ cmp.setup.cmdline(":", {
 		{ name = "cmdline" },
 	}),
 })
-
+require("mason").setup()
+require("mason-lspconfig").setup({
+	ensure_installed = { "lua_ls", "rust_analyzer" },
+})
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
-require("lspconfig").sumneko_lua.setup({ capabilities = capabilities })
+require("lspconfig").lua_ls.setup({
+	capabilities = capabilities,
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = { "vim", "rt" },
+			},
+		},
+	},
+})
 require("lspconfig").astro.setup({ capabilities = capabilities, filtypes = { "astro" } })
 require("lspconfig").tailwindcss.setup({ capabilities = capabilities })
 require("typescript").setup({
 	disable_commands = false, -- prevent the plugin from creating Vim commands
 	debug = false, -- enable debug logging for commands
 	server = { capabilities = capabilities },
+})
+
+require("rust-tools").setup({
+	server = {
+		on_attach = function(_, bufnr)
+			-- Hover actions
+			vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+			-- Code action groups
+			vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+		end,
+	},
 })
