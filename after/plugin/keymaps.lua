@@ -27,3 +27,8 @@ end)
 vim.keymap.set("n", "gR", function()
 	require("trouble").open("lsp_references")
 end)
+
+-- nvim-tree
+vim.keymap.set("n", "<leader>tt", function()
+	require("nvim-tree.api").tree.toggle()
+end)
