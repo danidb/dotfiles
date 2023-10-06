@@ -48,7 +48,7 @@ require("lspconfig").lua_ls.setup({
 	settings = {
 		Lua = {
 			diagnostics = {
-				globals = { "vim", "rt" },
+				globals = { "vim" },
 			},
 		},
 	},
@@ -61,7 +61,8 @@ require("typescript").setup({
 	server = { capabilities = capabilities },
 })
 
-require("rust-tools").setup({
+local rt = require("rust-tools")
+rt.setup({
 	server = {
 		on_attach = function(_, bufnr)
 			-- Hover actions
