@@ -2,10 +2,10 @@ return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("rebelot/kanagawa.nvim")
 	-- use("folke/tokyonight.nvim")
-	-- use({
-	-- 	"rose-pine/nvim",
-	-- 	as = "rose-pine",
-	-- })
+	use({
+		"rose-pine/nvim",
+		as = "rose-pine",
+	})
 	use({
 		"folke/zen-mode.nvim",
 		config = function()
@@ -25,7 +25,7 @@ return require("packer").startup(function(use)
 	use("ThePrimeagen/harpoon")
 	use({
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.0",
+		tag = "0.1.4",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 	use({
@@ -71,6 +71,7 @@ return require("packer").startup(function(use)
 	use("simrat39/rust-tools.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("mfussenegger/nvim-dap")
+	use("ellisonleao/gruvbox.nvim")
 	-- use({
 	-- 	"maxmx03/solarized.nvim",
 	-- 	config = function()

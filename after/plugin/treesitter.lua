@@ -7,5 +7,7 @@ require("nvim-treesitter.configs").setup({
 	},
 	autotag = {
 		enable = true,
+		-- https://github.com/windwp/nvim-ts-autotag/issues/125 and others
+		enable_close_on_slash = false,
 	},
 })
