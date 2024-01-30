@@ -10,7 +10,7 @@ vim.keymap.set("n", "<leader>fh", telescope_builtin.help_tags, {})
 
 -- Trouble
 vim.keymap.set("n", "<leader>xx", function()
-	require("trouble").open()
+	require("trouble").toggle()
 end)
 vim.keymap.set("n", "<leader>xw", function()
 	require("trouble").open("workspace_diagnostics")
