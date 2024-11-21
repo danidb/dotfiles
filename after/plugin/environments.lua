@@ -55,10 +55,15 @@ require("lspconfig").lua_ls.setup({
 })
 require("lspconfig").astro.setup({ capabilities = capabilities, filtypes = { "astro" } })
 require("lspconfig").tailwindcss.setup({ capabilities = capabilities })
-require("typescript").setup({
-	disable_commands = false, -- prevent the plugin from creating Vim commands
-	debug = false, -- enable debug logging for commands
-	server = { capabilities = capabilities },
+require("lspconfig").ts_ls.setup({
+	capabilities = capabilities,
+})
+require("lspconfig").sqlls.setup({
+	capabilities = capabilities,
+	filetypes = { "sql" },
+	root_dir = function(_)
+		return vim.loop.cwd()
+	end,
 })
 
 local rt = require("rust-tools")
@@ -72,5 +77,3 @@ rt.setup({
 		end,
 	},
 })
-
-

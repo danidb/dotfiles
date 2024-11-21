@@ -2,10 +2,10 @@ return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("rebelot/kanagawa.nvim")
 	-- use("folke/tokyonight.nvim")
-	use({
-		"rose-pine/nvim",
-		as = "rose-pine",
-	})
+	-- use({
+	-- 	"rose-pine/nvim",
+	-- 	as = "rose-pine",
+	-- })
 	use({
 		"folke/zen-mode.nvim",
 		config = function()
@@ -44,21 +44,15 @@ return require("packer").startup(function(use)
 	use("kyazdani42/nvim-web-devicons")
 	use({
 		"folke/trouble.nvim",
-		requires = "kyazdani42/nvim-web-devicons",
 		config = function()
 			require("trouble").setup({
-				mode = "document_diagnostics",
-				auto_open = true,
-				-- your configuration comes here
-				-- or leave it empty to use the default settings
-				-- refer to the configuration section below
+				opts = {},
 			})
 		end,
 	})
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
 	use("neovim/nvim-lspconfig")
-	use("jose-elias-alvarez/typescript.nvim")
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-buffer")
@@ -71,21 +65,15 @@ return require("packer").startup(function(use)
 	use("nvim-lua/plenary.nvim")
 	use("mfussenegger/nvim-dap")
 	use("ellisonleao/gruvbox.nvim")
-	-- use({
-	-- 	"maxmx03/solarized.nvim",
-	-- 	config = function()
-	-- 		local success, solarized = pcall(require, "solarized")
-	--
-	-- 		vim.o.background = "dark"
-	--
-	-- 		solarized:setup({
-	-- 			config = {
-	-- 				theme = "neovim",
-	-- 				transparent = true,
-	-- 			},
-	-- 		})
-	--
-	-- 		vim.cmd("colorscheme solarized")
-	-- 	end,
-	-- })
+	use({ "https://github.com/apple/pkl-neovim", after = "nvim-treesitter", run = ":TSInstall! pkl" })
+	use({
+		"maxmx03/solarized.nvim",
+		config = function()
+			vim.o.background = "dark"
+			vim.o.termguicolors = true
+			local solarized = require("solarized")
+			solarized.setup({})
+			vim.cmd.colorscheme("solarized")
+		end,
+	})
 end)

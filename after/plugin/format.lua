@@ -12,6 +12,7 @@ require("formatter").setup({
 		rust = require("formatter.filetypes.rust").rustfmt,
 		typescriptreact = require("formatter.filetypes.typescriptreact").prettier,
 		prisma = require("formatter.defaults.prettier"),
+		sql = require("formatter.defaults.prettier"),
 		["*"] = require("formatter.filetypes.any").remove_trailing_whitespacee,
 	},
 })
