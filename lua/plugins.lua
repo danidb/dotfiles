@@ -66,14 +66,15 @@ return require("packer").startup(function(use)
 	use("mfussenegger/nvim-dap")
 	use("ellisonleao/gruvbox.nvim")
 	use({ "https://github.com/apple/pkl-neovim", after = "nvim-treesitter", run = ":TSInstall! pkl" })
-	use({
-		"maxmx03/solarized.nvim",
-		config = function()
-			vim.o.background = "dark"
-			vim.o.termguicolors = true
-			local solarized = require("solarized")
-			solarized.setup({})
-			vim.cmd.colorscheme("solarized")
-		end,
-	})
+	-- use({
+	-- 	"maxmx03/solarized.nvim",
+	-- 	config = function()
+	-- 		vim.o.background = "dark"
+	-- 		vim.o.termguicolors = true
+	-- 		local solarized = require("solarized")
+	-- 		solarized.setup({})
+	-- 		vim.cmd.colorscheme("solarized")
+	-- 	end,
+	-- })
+	use("scottmckendry/cyberdream.nvim")
 end)

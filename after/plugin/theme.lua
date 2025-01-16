@@ -57,11 +57,13 @@
 -- })
 -- vim.cmd("colorscheme kanagawa")
 
+vim.cmd("colorscheme cyberdream")
 require("lualine").setup({
 	options = {
 		component_separators = "",
 		section_separators = "",
-		theme = "solarized",
+		theme = "auto",
+		--theme = "solarized",
 		disabled_filetypes = {
 			"NvimTree",
 		},

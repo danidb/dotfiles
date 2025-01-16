@@ -110,6 +110,11 @@ _G.packer_plugins = {
     path = "/Users/d2b/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["cyberdream.nvim"] = {
+    loaded = true,
+    path = "/Users/d2b/.local/share/nvim/site/pack/packer/start/cyberdream.nvim",
+    url = "https://github.com/scottmckendry/cyberdream.nvim"
+  },
   ["formatter.nvim"] = {
     loaded = true,
     path = "/Users/d2b/.local/share/nvim/site/pack/packer/start/formatter.nvim",
@@ -197,12 +202,6 @@ _G.packer_plugins = {
     path = "/Users/d2b/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
     url = "https://github.com/simrat39/rust-tools.nvim"
   },
-  ["solarized.nvim"] = {
-    config = { "\27LJ\2\nc\0\0\4\0\6\0\f6\0\0\0'\2\1\0B\0\2\0029\1\2\0004\3\0\0B\1\2\0016\1\3\0009\1\4\0019\1\5\1'\3\1\0B\1\2\1K\0\1\0\16colorscheme\bcmd\bvim\nsetup\14solarized\frequire\0" },
-    loaded = true,
-    path = "/Users/d2b/.local/share/nvim/site/pack/packer/start/solarized.nvim",
-    url = "https://github.com/maxmx03/solarized.nvim"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/d2b/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -241,10 +240,6 @@ time([[Config for Comment.nvim]], false)
 time([[Config for trouble.nvim]], true)
 try_loadstring("\27LJ\2\nO\0\0\4\0\5\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\0\0=\3\4\2B\0\2\1K\0\1\0\topts\1\0\1\topts\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
--- Config for: solarized.nvim
-time([[Config for solarized.nvim]], true)
-try_loadstring("\27LJ\2\nc\0\0\4\0\6\0\f6\0\0\0'\2\1\0B\0\2\0029\1\2\0004\3\0\0B\1\2\0016\1\3\0009\1\4\0019\1\5\1'\3\1\0B\1\2\1K\0\1\0\16colorscheme\bcmd\bvim\nsetup\14solarized\frequire\0", "config", "solarized.nvim")
-time([[Config for solarized.nvim]], false)
 -- Config for: todo-comments.nvim
 time([[Config for todo-comments.nvim]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
