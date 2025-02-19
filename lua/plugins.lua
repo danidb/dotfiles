@@ -78,4 +78,5 @@ return require("packer").startup(function(use)
 	-- 	end,
 	-- })
 	use("scottmckendry/cyberdream.nvim")
+        use("folke/twilight.nvim")
 end)
