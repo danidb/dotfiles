@@ -57,6 +57,8 @@
 -- })
 -- vim.cmd("colorscheme kanagawa")
 
+require("ibl").setup()
+
 vim.cmd("colorscheme cyberdream")
 require("lualine").setup({
 	options = {
