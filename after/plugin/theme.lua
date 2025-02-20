@@ -58,8 +58,9 @@
 -- vim.cmd("colorscheme kanagawa")
 
 require("ibl").setup()
+require("flexoki").setup()
 
-vim.cmd("colorscheme cyberdream")
+vim.cmd("colorscheme flexoki")
 require("lualine").setup({
 	options = {
 		component_separators = "",
