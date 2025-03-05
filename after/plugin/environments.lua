@@ -1,4 +1,19 @@
-local lspconfig = require("lspconfig")
+require("telescope").setup({
+	defaults = {
+		sorting_strategy = "ascending",
+		layout_strategy = "horizontal",
+		layout_config = { prompt_position = "top" },
+		border = true,
+	},
+	extensions = {
+		file_browser = {
+			grouped = true,
+			auto_depth = true,
+			hijack_netrw = true,
+		},
+	},
+})
+require("telescope").load_extension("file_browser")
 
 local cmp = require("cmp")
 cmp.setup({
