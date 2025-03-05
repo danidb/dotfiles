@@ -5,8 +5,9 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 local telescope_builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", telescope_builtin.find_files, {})
 vim.keymap.set("n", "<leader>fg", telescope_builtin.live_grep, {})
-vim.keymap.set("n", "<leader>fb", telescope_builtin.buffers, {})
+--vim.keymap.set("n", "<leader>fb", telescope_builtin.buffers, {})
 vim.keymap.set("n", "<leader>fh", telescope_builtin.help_tags, {})
+vim.keymap.set("n", "<space>fb", ":Telescope file_browser<CR>")
 
 -- Trouble
 vim.keymap.set("n", "<leader>xx", function()
@@ -21,9 +22,3 @@ end)
 vim.keymap.set("n", "gR", function()
 	require("trouble").open("lsp_references")
 end)
-
--- nvim-tree
-vim.keymap.set("n", "<leader>tt", function()
-	require("nvim-tree.api").tree.toggle()
-end)
-vim.keymap.set("n", "<S-%>", require("nvim-tree.api").fs.create)

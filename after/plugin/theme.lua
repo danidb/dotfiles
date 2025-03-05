@@ -82,16 +82,3 @@ require("lualine").setup({
 		lualine_z = { "branch" },
 	},
 })
-
-require("nvim-tree").setup({
-	sort_by = "case_sensitive",
-	update_focused_file = {
-		enable = true,
-	},
-	view = {
-		width = 30,
-	},
-	filters = {
-		dotfiles = true,
-	},
-})
