@@ -1,4 +1,5 @@
 return require("packer").startup(function(use)
+	use("stevearc/oil.nvim")
 	use("wbthomason/packer.nvim")
 	use("rebelot/kanagawa.nvim")
 	-- use("folke/tokyonight.nvim")

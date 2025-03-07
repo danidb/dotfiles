@@ -9,11 +9,17 @@ require("telescope").setup({
 		file_browser = {
 			grouped = true,
 			auto_depth = true,
-			hijack_netrw = true,
+			hijack_netrw = false,
 		},
 	},
 })
 require("telescope").load_extension("file_browser")
+
+require("oil").setup({
+	default_file_explorer = false,
+	delete_to_trash = true,
+	watch_for_changes = true,
+})
 
 local cmp = require("cmp")
 cmp.setup({
