@@ -1,5 +1,7 @@
 return require("packer").startup(function(use)
-	use("stevearc/oil.nvim")
+	use("stevearc/oil.nvim", {
+		requires = { "nvim-treesitter/nvim-treesitter" },
+	})
 	use("wbthomason/packer.nvim")
 	use("rebelot/kanagawa.nvim")
 	-- use("folke/tokyonight.nvim")

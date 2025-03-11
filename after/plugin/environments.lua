@@ -11,6 +11,7 @@ require("telescope").setup({
 			auto_depth = true,
 			hijack_netrw = false,
 		},
+		fzf = {},
 	},
 })
 require("telescope").load_extension("file_browser")
@@ -82,6 +83,9 @@ require("lspconfig").sqlls.setup({
 	root_dir = function(_)
 		return vim.loop.cwd()
 	end,
+})
+require("lspconfig").marksman.setup({
+	capabilities = capabilities,
 })
 
 local rt = require("rust-tools")
