@@ -72,6 +72,19 @@ require("lspconfig").lua_ls.setup({
 		},
 	},
 })
+
+local rt = require("rust-tools")
+rt.setup({
+	server = {
+		on_attach = function(_, bufnr)
+			-- Hover actions
+			vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+			-- Code action groups
+			vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+		end,
+	},
+})
+
 require("lspconfig").astro.setup({ capabilities = capabilities, filtypes = { "astro" } })
 require("lspconfig").tailwindcss.setup({ capabilities = capabilities })
 require("lspconfig").ts_ls.setup({
@@ -86,16 +99,4 @@ require("lspconfig").sqlls.setup({
 })
 require("lspconfig").marksman.setup({
 	capabilities = capabilities,
-})
-
-local rt = require("rust-tools")
-rt.setup({
-	server = {
-		on_attach = function(_, bufnr)
-			-- Hover actions
-			vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
-			-- Code action groups
-			vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
-		end,
-	},
 })
