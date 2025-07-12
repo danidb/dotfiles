@@ -2,9 +2,15 @@ return {
     "saghen/blink.cmp",
     dependencies = { 'rafamadriz/friendly-snippets' },
     version = '*',
-
     opts_extend = { "sources.default" },
     opts = {
+        completion = {
+            accept = { auto_brackets = { enabled = false }, },
+            ghost_text = { enabled = true },
+            menu = {
+                auto_show = true
+            },
+        },
         fuzzy = { implementation = "rust" },
         keymap = { preset = "default" },
         appearance = {

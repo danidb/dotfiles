@@ -1,6 +1,6 @@
 require("config.lazy")
 
-vim.g.do_filetype_lua = 1
+vim.o.background="dark"
 require("settings")
 require("filetypes")
 

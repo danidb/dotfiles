@@ -1,7 +1,7 @@
 return {
     {
         "nvim-lualine/lualine.nvim",
-        dependencies = { "kyazdani42/nvim-web-devicons" },
+        dependencies = { "nvim-tree/nvim-web-devicons" },
         opts = {
             options = {
                 component_separators = "",
@@ -13,9 +13,7 @@ return {
                 lualine_b = { "location" },
                 lualine_c = { "diagnostics" },
                 lualine_x = { "" },
-                lualine_y = { "diff" },
-                lualine_z = { "branch" },
             },
-        }
+                }
     }
 }

@@ -9,6 +9,9 @@ return {
                 sorting_strategy = "ascending",
                 layout_strategy = "horizontal",
                 layout_config = { prompt_position = "top" },
+                file_ignore_patterns = {
+                    "node_modules"
+                },
                 border = true,
             },
             extensions = {
