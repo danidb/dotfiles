@@ -32,3 +32,8 @@ if [ -f '/home/d2b/dev/misc/google-cloud-sdk/completion.zsh.inc' ]; then . '/hom
 # Go
 export PATH="$PATH:$HOME/.local/go/bin"
 export PATH="$PATH:$HOME/go/bin"
+
+# Ghostty profile swapper
+alias ghostty-dev="$HOME/dev/dotfiles/scripts/ghostty-switch-profile.sh dev"
+
+alias ghostty-rec="$HOME/dev/dotfiles/scripts/ghostty-switch-profile.sh recording"

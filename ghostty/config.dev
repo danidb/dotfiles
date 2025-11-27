@@ -1,0 +1,8 @@
+font-family = "Iosevka Nerd Font"
+font-size = 20
+theme=kanagawa-wave
+gtk-titlebar=false
+window-show-tab-bar=always
+font-feature=-calt,-liga,-dlig
+window-padding-x=20
+window-padding-y=20
